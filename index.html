@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TODO</title>
+  </head>
+  <body>
+    
+      <h1>Hello</h1>
+    <div class="taskForm">
+      <div class="inputs">
+        <input name="title" placeholder="Название темы" class="inputTask" type="text" />
+        <input name="body" placeholder="Описание" class="inputTask" type="text" />
+      </div>
+      <span class="errorForm"></span>
+      <div class="buttons">
+        <button class="bttn createTask">Создать</button>
+        <button class="bttn exit">Отмена</button>
+      </div>
+    </div>
+
+
+    <div class="body">
+      <aside class="mainTask">
+        <span></span>
+        <div class="listTask generalTask"></div>
+      </aside>
+      <main class="menu">
+        <header class="action">
+          <button class="addMainTask  bttn">Добавить задачу</button>
+          <button class="addSubTask  bttn">Добавить подзадачу</button>
+          <span class="error-subTask">Сначало надо выбрать основную тему</span>
+          <hr />
+        </header>
+        <div class="subTask">
+            <span>Описание</span>
+            <div class="description"></div>
+          <div class="listTask taskSub"></div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

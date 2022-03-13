@@ -1,0 +1,198 @@
+.body {
+  margin: 20px 0px 0px 20px;
+  width: 800px;
+  border: 1px solid #000;
+  padding: 15px;
+  font-size: 16px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+}
+.state {
+  margin:0px 0px 0px 10px;
+}
+.generalTask{
+  height: 400px;
+  overflow: auto;
+}
+.taskSub{
+  height: 250px;
+  overflow: auto;
+}
+
+.error-subTask{
+  margin:0px 0px 0px 20px;
+  color:red;
+  visibility:hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+.error-subTask.active{
+  visibility: visible;
+  opacity: 1;
+}
+.open {
+  cursor: pointer;
+}
+
+.mainTask {
+  min-height: 300px;
+  min-width: 200px;
+  border-right: 1px solid #000;
+  margin: 0px 20px 0px 0px;
+}
+.description {
+  margin: 10px 0px 20px 0px;
+  max-height: 150px;
+  overflow: auto;
+}
+.menu {
+  flex: 1 1 auto;
+}
+hr {
+  margin: 20px 0px 0px 0px;
+  height: 1px;
+  background-color: black;
+}
+.task-title{
+  flex: 1 1 auto;
+  white-space: normal;
+  height: auto;
+}
+.bttn {
+  font-size: 14px;
+  padding: 0px 10px;
+  height: 30px;
+  background-color: goldenrod;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.bttn:active {
+  outline: firebrick;
+  transform: translate(0, 2px);
+  box-shadow: 0 2px 2px rgb(0, 0, 0, 0.3);
+}
+.taskItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px 0px 20px 0px;
+  cursor: pointer;
+}
+.taskItem.solved {
+  text-decoration: line-through;
+  justify-content: end;
+  gap: 0px 10px;
+}
+.taskDesription {
+  display: none;
+}
+.bodySubTask {
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  height: 0;
+  transform: translate(0, -1000px);
+}
+.bodySubTask.active {
+  transform: translate(0, 0);
+  padding: 10px;
+  height: 90px;
+  overflow: auto;
+  visibility: visible;
+  border: 1px solid #000;
+}
+
+.taskForm {
+  z-index: 20;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 350px;
+  top: 30%;
+  left: 30%;
+  border-radius: 5px;
+  border: 2px solid yellowgreen;
+  transition: all 0.3s ease 0s;
+}
+.errorForm {
+  text-align: center;
+  color: red;
+  display: block;
+  margin: 0px 0px 10px 0px;
+}
+.taskForm.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.removeTask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("./img/remove.png") 0 0 / cover no-repeat;
+  transition: all 0.3s ease 0s;
+  width: 15px;
+  opacity: 0;
+  visibility: hidden;
+  height: 15px;
+}
+.removeTask.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.removeTask:hover {
+  transform: scale(1.5);
+}
+.itemSubTask {
+  transition: all 0.3s ease 0s;
+  position: relative;
+  display: none;
+  margin:0px 0px 10px 0px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemSubTask.solved {
+  padding: 0px 0px 0px 40px;
+  text-decoration: line-through;
+}
+.buttons {
+  margin: 0px 0px 20px 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.inputs {
+  text-align: center;
+}
+
+.inputTask {
+  width: 80%;
+  height: 30px;
+  font-size: 15px;
+  padding: 0px 0px 0px 10px;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 10px 0px 20px 10px;
+}
+.inputTask:focus {
+  border: 1px solid #dbd00a;
+  box-shadow: 0 0 5px #dbd00a;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
